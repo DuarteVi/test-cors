@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const ALICE = { 
+    'pseudo': "Alice",
+    'password': "MiamLesPommes",
+    'phone': "0611332022"
+} 
+
 export async function GET (request: NextRequest){
-    const greeting = "Hello World!!"
-    const json = {
-        greeting
-    };
     
-    return NextResponse.json(json);
+    return NextResponse.json(ALICE);
 }
+
