@@ -59,6 +59,17 @@ export default function Home() {
 
       <h1 style={{ color: 'green', textAlign: 'center' }}>Mon site</h1>
 
+      <h2 style={{ color: 'blue', textAlign: 'center' }}>site online 1 :</h2>
+      <div style={{textAlign: 'center'}}>
+      <a href='https://test-cors-drab.vercel.app/' target="_blank">https://test-cors-drab.vercel.app/</a>
+      </div>
+
+      <h2 style={{ color: 'blue', textAlign: 'center' }}>site online 2 :</h2>
+      <div style={{textAlign: 'center'}}>
+      <a href='https://test-cors-second.vercel.app/' target="_blank">https://test-cors-second.vercel.app/</a>
+      </div>
+
+      <h2 style={{ color: 'brown', textAlign: 'center' }}>Boutons :</h2>
       <div style={{textAlign: 'center'}}>
           <p> Call auto : {pseudoGetAlice}</p>
       </div>
