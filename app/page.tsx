@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchFirstName = async () => {
-      const res = await fetch('http://3000/api/hello');
+      const res = await fetch('https://test-cors-drab.vercel.app/api/hello');
       console.log("respons = " + res);
       const data = await res.json();
       setFirstName(data.pseudo);
