@@ -59,17 +59,7 @@ export default function Home() {
 
       <h1 style={{ color: 'green', textAlign: 'center' }}>Mon site</h1>
 
-      <h2 style={{ color: 'blue', textAlign: 'center' }}>site online 1 :</h2>
-      <div style={{textAlign: 'center'}}>
-      <a href='https://test-cors-drab.vercel.app/' target="_blank">https://test-cors-drab.vercel.app/</a>
-      </div>
-
-      <h2 style={{ color: 'blue', textAlign: 'center' }}>site online 2 :</h2>
-      <div style={{textAlign: 'center'}}>
-      <a href='https://test-cors-second.vercel.app/' target="_blank">https://test-cors-second.vercel.app/</a>
-      </div>
-
-      <h2 style={{ color: 'brown', textAlign: 'center' }}>Boutons :</h2>
+      <h3 style={{ color: 'brown', textAlign: 'center' }}>Boutons :</h3>
       <div style={{textAlign: 'center'}}>
           <p> Call auto : {pseudoGetAlice}</p>
       </div>
@@ -88,6 +78,21 @@ export default function Home() {
       {loadingBob&& <p>Chargement...</p>}
       {errorBob && <p>{errorBob}</p>}
       {dataBob && <p>Données: {dataBob}</p>}
+      </div>
+
+      <h3 style={{ color: 'purple', textAlign: 'center' }}>site online 1 :</h3>
+      <div style={{textAlign: 'center'}}>
+      <a href='https://test-cors-drab.vercel.app/' target="_blank">https://test-cors-drab.vercel.app/</a>
+      </div>
+
+      <h3 style={{ color: 'purple', textAlign: 'center' }}>site online 2 :</h3>
+      <div style={{textAlign: 'center'}}>
+      <a href='https://test-cors-second.vercel.app/' target="_blank">https://test-cors-second.vercel.app/</a>
+      </div>
+
+      <h3 style={{ color: 'purple', textAlign: 'center' }}>Online dashboard :</h3>
+      <div style={{textAlign: 'center'}}>
+      <a href='https://vercel.com/vincent-duartes-projects' target="_blank">https://vercel.com/vincent-duartes-projects</a>
       </div>
 
     </main>
