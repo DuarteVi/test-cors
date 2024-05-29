@@ -14,7 +14,7 @@ export default function Home() {
 
   const routeCallAuto = 'https://test-cors-drab.vercel.app/api/hello';
   const routeGetAlice = 'https://test-cors-drab.vercel.app/api/hello';
-  const routeDeleteBob = 'https://test-cors-second.vercel.app';
+  const routeDeleteBob = 'https://test-cors-drab.vercel.app/api/hello';
 
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
