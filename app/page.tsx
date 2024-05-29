@@ -9,7 +9,7 @@ export default function Home() {
 
   https://test-cors-drab.vercel.app/api/hello
 
-  https://test-cors-second.vercel.app
+  https://test-cors-second.vercel.app/api/hello
   */
 
   const routeCallAuto = 'https://test-cors-drab.vercel.app/api/hello';
