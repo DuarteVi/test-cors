@@ -16,6 +16,8 @@ export default function Home() {
   const routeGetAlice = 'https://test-cors-drab.vercel.app/api/hello';
   const routeDeleteBob = 'https://test-cors-drab.vercel.app/api/hello';
 
+  const routeCookie = 'https://test-cors-second.vercel.app/api/cookie';
+
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
 
@@ -53,12 +55,36 @@ export default function Home() {
     setLoadingBob(true);
     setErrorBob(null);
     try {
-      const response = await axios.delete(routeDeleteBob); // Remplacez '/api/data' par votre URL de l'API
+      const response = await axios.delete(routeDeleteBob);
       setDataBob(response.data.pseudo);
     } catch (error) {
       setErrorBob('Erreur lors de la récupération des données');
     } finally {
       setLoadingBob(false);
+    }
+  };
+
+  const setMyCookie = async () => {
+    await axios.post(routeCookie);
+  };
+
+  const deleteMyCookie = async () => {
+    await axios.delete(routeCookie);
+  };
+
+  const [dataCookie, setDataCookie] = useState<string | null>(null);
+  const [loadingCookie, setLoadingCookie] = useState<boolean>(false);
+  const [errorCookie, setErrorCookie] = useState<string | null>(null);
+  const getMyCookie = async () => {
+    setLoadingCookie(true);
+    setErrorCookie(null);
+    try {
+      const response = await axios.get(routeCookie);
+      setDataCookie(response.data);
+    } catch (error) {
+      setErrorCookie('Erreur lors de la récupération des données');
+    } finally {
+      setLoadingCookie(false);
     }
   };
   
@@ -86,6 +112,16 @@ export default function Home() {
       {loadingBob&& <p>Chargement...</p>}
       {errorBob && <p>{errorBob}</p>}
       {dataBob && <p>Données: {dataBob}</p>}
+      </div>
+
+      <div style={{textAlign: 'center'}}>
+      <h3>Cookie :</h3>
+      <button onClick={setMyCookie}>Set</button>
+      <button onClick={deleteMyCookie}>Delete</button>
+      <button onClick={getMyCookie}>Get</button>
+      {loadingCookie&& <p>Chargement...</p>}
+      {errorCookie && <p>{errorCookie}</p>}
+      {dataCookie && <p>Données: {dataCookie}</p>}
       </div>
 
       <h3 style={{ color: 'purple', textAlign: 'center' }}>site online 1 :</h3>
