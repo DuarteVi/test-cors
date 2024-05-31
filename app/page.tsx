@@ -23,6 +23,7 @@ export default function Home() {
   const routeCallAuto = 'https://test-cors-drab.vercel.app/api/hello';
   const routeGetAlice = 'https://test-cors-second.vercel.app/api/hello';
   const headerGetALice = {
+    Cookie: 'MonSuperCookie' , 
     withCredentials: true
   };
   const routeDeleteBob = 'https://test-cors-second.vercel.app/api/hello';
