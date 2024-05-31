@@ -5,6 +5,14 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   /*
+
+  {
+    withCredentials: true,
+    headers: {
+      Authorization: 'Bearer your-token-here'
+    }
+
+
   http://localhost:3000
 
   https://test-cors-drab.vercel.app/api/hello
@@ -14,7 +22,16 @@ export default function Home() {
 
   const routeCallAuto = 'https://test-cors-drab.vercel.app/api/hello';
   const routeGetAlice = 'https://test-cors-second.vercel.app/api/hello';
+  const headerGetALice = {
+    withCredentials: true
+  };
   const routeDeleteBob = 'https://test-cors-second.vercel.app/api/hello';
+  const headerDeleteBob = {
+    withCredentials: true,
+    headers: {
+      Authorization: 'Bearer your-token-here'
+    }
+  }
 
   const routeCookie = 'https://test-cors-drab.vercel.app/api/cookie';
 
@@ -39,7 +56,7 @@ export default function Home() {
     setLoadingAlice(true);
     setErrorAlice(null);
     try {
-      const response = await axios.get(routeGetAlice); // Remplacez '/api/data' par votre URL de l'API
+      const response = await axios.get(routeGetAlice, headerGetALice); // Remplacez '/api/data' par votre URL de l'API
       setDataAlice(response.data.pseudo);
     } catch (error) {
       setErrorAlice('Erreur lors de la récupération des données');
@@ -55,12 +72,7 @@ export default function Home() {
     setLoadingBob(true);
     setErrorBob(null);
     try {
-      const response = await axios.delete(routeDeleteBob, {
-        withCredentials: true,
-        headers: {
-          Authorization: 'Bearer your-token-here'
-        }
-      });
+      const response = await axios.delete(routeDeleteBob, headerDeleteBob);
       setDataBob(response.data.pseudo);
     } catch (error) {
       setErrorBob('Erreur lors de la récupération des données');
