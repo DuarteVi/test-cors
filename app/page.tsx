@@ -16,7 +16,7 @@ export default function Home() {
   const routeGetAlice = 'https://test-cors-drab.vercel.app/api/hello';
   const routeDeleteBob = 'https://test-cors-drab.vercel.app/api/hello';
 
-  const routeCookie = 'https://test-cors-second.vercel.app/api/cookie';
+  const routeCookie = 'https://test-cors-drab.vercel.app/api/cookie';
 
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
