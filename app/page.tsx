@@ -56,6 +56,7 @@ export default function Home() {
     setErrorBob(null);
     try {
       const response = await axios.delete(routeDeleteBob, {
+        withCredentials: true,
         headers: {
           Authorization: 'Bearer your-token-here'
         }
