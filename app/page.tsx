@@ -55,7 +55,11 @@ export default function Home() {
     setLoadingBob(true);
     setErrorBob(null);
     try {
-      const response = await axios.delete(routeDeleteBob);
+      const response = await axios.delete(routeDeleteBob, {
+        headers: {
+          Authorization: 'Bearer your-token-here'
+        }
+      });
       setDataBob(response.data.pseudo);
     } catch (error) {
       setErrorBob('Erreur lors de la récupération des données');
