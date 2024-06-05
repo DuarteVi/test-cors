@@ -34,7 +34,7 @@ export default function Home() {
     // }
   }
 
-  const routeCookie = 'https://test-cors-second.vercel.app/api/cookie';
+  const routeCookie = 'https://test-cors-drab.vercel.app/api/cookie';
 
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
