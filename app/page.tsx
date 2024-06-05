@@ -22,7 +22,7 @@ export default function Home() {
   */
 
   const routeCallAuto = 'https://test-cors-drab.vercel.app/api/hello';
-  const routeGetAlice = 'https://test-cors-drab.vercel.app/api/hello';
+  const routeGetAlice = 'https://test-cors-second.vercel.app/api/hello';
   const headerGetALice = {
     withCredentials: true
   };
@@ -34,7 +34,7 @@ export default function Home() {
     // }
   }
 
-  const routeCookie = 'https://test-cors-drab.vercel.app/api/cookie';
+  const routeCookie = 'https://test-cors-second.vercel.app/api/cookie';
 
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
@@ -57,9 +57,8 @@ export default function Home() {
     setLoadingAlice(true);
     setErrorAlice(null);
     try {
-      const response = await fetch(routeGetAlice, {credentials: "include"})
-      const data = await response.json()
-      // setDataAlice(response.pseudo);
+      const response = await axios.get(routeGetAlice, headerGetALice); // Remplacez '/api/data' par votre URL de l'API
+      setDataAlice(response.data.pseudo);
     } catch (error) {
       setErrorAlice('Erreur lors de la récupération des données');
     } finally {
