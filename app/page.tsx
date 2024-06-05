@@ -57,7 +57,9 @@ export default function Home() {
     setLoadingAlice(true);
     setErrorAlice(null);
     try {
-      const response = await axios.get(routeGetAlice, headerGetALice); // Remplacez '/api/data' par votre URL de l'API
+      const response = await axios.get(routeGetAlice, {
+        withCredentials: true
+      }); // Remplacez '/api/data' par votre URL de l'API
       setDataAlice(response.data.pseudo);
     } catch (error) {
       setErrorAlice('Erreur lors de la récupération des données');
