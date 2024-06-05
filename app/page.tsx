@@ -28,7 +28,7 @@ export default function Home() {
   };
   const routeDeleteBob = 'https://test-cors-second.vercel.app/api/hello';
   const headerDeleteBob = {
-    withCredentials: true //,
+    // withCredentials: true //,
     // headers: {
     //   Authorization: 'Bearer your-token-here'
     // }
