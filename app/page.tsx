@@ -1,5 +1,5 @@
 "use client"
-import CallMyself from '@/app/pages/callMyself';
+import CallMyself from '@/app/pages/CallMyself';
 import axios from 'axios';
 import { useState } from "react";
 
