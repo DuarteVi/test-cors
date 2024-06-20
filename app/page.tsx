@@ -1,4 +1,5 @@
 "use client"
+import CallRemoteValidOrigin from '@/app/pages/CallRemoteValidOrigin';
 import CallSameOrigin from '@/app/pages/CallSameOrigin';
 import { URL } from '@/app/pages/utils';
 
@@ -12,7 +13,7 @@ export default function Home() {
       <p>Here, you can simply test different CORS configurations. Some requests are on the same origin, and others on an remote api.</p>
 
       <CallSameOrigin url={URL.SAME_ORIGIN}></CallSameOrigin>
-
+      <CallRemoteValidOrigin url={URL.REMOTE_VALID_ORIGIN}></CallRemoteValidOrigin>
     </main>
   );
 }
