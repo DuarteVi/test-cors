@@ -9,6 +9,6 @@ export const HttpMethod = {
   };
 
 export const URL = {
-  SAME_ORIGIN: 'https://test-cors-drab.vercel.app',
-  REMOTE_VALID_ORIGIN: 'https://test-cors-second.vercel.app',
+  SAME_ORIGIN: 'https://test-cors-drab.vercel.app/api/data',
+  REMOTE_VALID_ORIGIN: 'https://test-cors-second.vercel.app/api/data',
 };
