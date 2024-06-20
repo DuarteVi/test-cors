@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 
-const MakeACall = ({method, url}) => {
+interface MakeACallProps {
+  method: string;
+  url: string;
+}
+
+const MakeACall: React.FC<MakeACallProps>  = ({method, url}) => {
 
     const [data, setData] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(false);

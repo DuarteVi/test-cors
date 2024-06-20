@@ -1,7 +1,7 @@
 import MakeACall from "@/app/pages/MakeACall";
-import { HttpMethod } from "@/app/pages/utils";
+import { CallSection, HttpMethod } from "@/app/pages/utils";
 
-const CallRemoteValidOrigin = ({url}) => {
+const CallRemoteValidOrigin: React.FC<CallSection> = ({url}) => {
 
   return (
     <div>
