@@ -12,8 +12,8 @@ export default function Home() {
 
       <p>Here, you can simply test different CORS configurations. Some requests are on the same origin, and others on an remote api.</p>
 
-      <CallSameOrigin url={URL.SAME_ORIGIN}></CallSameOrigin>
-      <CallRemoteValidOrigin url={URL.REMOTE_VALID_ORIGIN}></CallRemoteValidOrigin>
+      <CallSameOrigin index="0" url={URL.SAME_ORIGIN}></CallSameOrigin>
+      <CallRemoteValidOrigin index="1" url={URL.REMOTE_VALID_ORIGIN}></CallRemoteValidOrigin>
     </main>
   );
 }
