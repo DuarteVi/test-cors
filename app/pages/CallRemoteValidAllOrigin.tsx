@@ -1,6 +1,6 @@
 import Code from "@/app/pages/Code";
 import MakeACall from "@/app/pages/MakeACall";
-import { CallSection, HttpMethod, ORIGIN, URL } from "@/app/pages/utils";
+import { CallSection, HttpMethod, ORIGIN } from "@/app/pages/utils";
 
 const CallRemoteValidOrigin: React.FC<CallSection> = ({index, url}) => {
   
@@ -8,7 +8,7 @@ const CallRemoteValidOrigin: React.FC<CallSection> = ({index, url}) => {
     <div>
       <h3>{index}. Allows all requests</h3>
       <p>In this section, my frontend call a server on the remote origin. The server define CORS to allowing for my origin and my methods</p>
-      <Code source={URL.REMOTE_VALID_ALL_ORIGIN} origin={ORIGIN.ALL} methods={"GET,PATCH,POST,PUT,OPTIONS,DELETE"}></Code>
+      <Code source={url} origin={ORIGIN.ALL} methods={"GET,PATCH,POST,PUT,OPTIONS,DELETE"}></Code>
       <MakeACall method={HttpMethod.GET} url={url}></MakeACall>
       <MakeACall method={HttpMethod.HEAD} url={url}></MakeACall>
       <MakeACall method={HttpMethod.POST} url={url}></MakeACall>
